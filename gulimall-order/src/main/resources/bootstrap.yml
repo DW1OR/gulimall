@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: gulimall-order
+  cloud:
+    nacos:
+      server-addr: 192.168.232.129:8848
+      discovery:
+        namespace: dev
+        group: gulimall
+      config:
+        namespace: dev
+        group: gulimall
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs:
+          - data-id: gulimall-order.yaml
+            group: gulimall
+            refresh: true
+        shared-configs:
+          - data-id: mybatis-plus.yaml
+            group: gulimall-common
+            refresh: true
