@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      server-addr: 192.168.232.129:8848
+      discovery:
+        namespace: dev
+        group: gulimall
+      config:
+        namespace: dev
+        group: gulimall
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs:
+          - data-id: gulimall-gateway.yaml
+            group: gulimall
+            refresh: true
